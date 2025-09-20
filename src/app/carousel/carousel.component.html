@@ -1,0 +1,26 @@
+<div class="relative w-full h-96 bg-red-500 overflow-hidden z-10"
+     (touchstart)="startTouch($event)" (touchend)="endTouch($event)">
+
+  <div class="absolute top-1/2 left-0 right-0 flex justify-between px-4 transform -translate-y-1/2 z-20">
+    <button class="text-white text-3xl hover:text-red-800" (click)="prevImage()">
+      <!-- left arrow svg -->
+    </button>
+    <button class="text-white text-3xl hover:text-red-800" (click)="nextImage()">
+      <!-- right arrow svg -->
+    </button>
+  </div>
+
+  <div class="w-full h-full overflow-hidden">
+    <div class="flex h-full transition-transform duration-500 ease-in-out"
+         [style.transform]="'translateX(-' + currentImageIndex * 100 + '%)'">
+
+      <img src="attender.jpg" alt="attender" class="flex-shrink-0 w-full h-full object-cover" />
+      <img src="civilwork.jpg" alt="civilwork" class="flex-shrink-0 w-full h-full object-cover" />
+      <img src="dataoperator.jpg" alt="dataoperator" class="flex-shrink-0 w-full h-full object-cover" />
+      <img src="driver.webp" alt="driver" class="flex-shrink-0 w-full h-full object-cover" />
+      <img src="manpower.jpg" alt="manpower" class="flex-shrink-0 w-full h-full object-cover" />
+      <img src="office.jpg" alt="office" class="flex-shrink-0 w-full h-full object-cover" />
+
+    </div>
+  </div>
+</div>

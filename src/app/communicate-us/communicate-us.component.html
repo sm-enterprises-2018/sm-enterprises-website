@@ -1,0 +1,56 @@
+<div id="contactus" class="h-fit pb-16 bg-gray-700">
+  <h1 class="pt-10 text-5xl font-semibold text-center text-sky-400 underline">Communicate with Us</h1>
+  <div class="flex flex-col sm:flex-row pt-14 mx-6 sm:mx-20 gap-10">
+    <div class="w-full text-gray-100 h-auto">
+      <h1 class="mx-auto sm:mx-0 sm:ml-20 mt-10 text-xl font-semibold">How can we Help you?</h1>
+      <form class="flex flex-col mx-auto mt-6 max-w-md space-y-4" action="https://formsubmit.co/smenterprise6777@gmail.com" method="POST">
+        <label for="name" class="font-sans font-semibold text-sky-300">Name:</label>
+        <input
+          class="text-gray-900 border-2 border-cool-gray-400 rounded-lg w-full focus:outline-none focus:border-sky-400 px-3 py-2"
+          type="text"
+          name="name"
+          id="name"
+          required
+        />
+
+        <label for="Email" class="font-sans font-semibold text-sky-300">Email:</label>
+        <input
+          class="text-gray-900 border-2 border-cool-gray-400 rounded-lg w-full focus:outline-none focus:border-sky-400 px-3 py-2"
+          type="email"
+          name="Email"
+          id="Email"
+          required
+        />
+
+        <label for="number" class="font-sans font-semibold text-sky-300">Phone number:</label>
+        <input
+          class="text-gray-900 border-2 border-cool-gray-400 rounded-lg w-full focus:outline-none focus:border-sky-400 px-3 py-2"
+          type="tel"
+          name="number"
+          id="number"
+          required
+        />
+
+        <label for="message" class="font-sans font-semibold text-sky-300">Message:</label>
+        <textarea
+          class="text-gray-900 border-2 border-cool-gray-400 rounded-lg w-full h-24 resize-none focus:outline-none focus:border-sky-400 px-3 py-2"
+          name="message"
+          id="message"
+          required
+        ></textarea>
+
+        <input
+          class="w-24 px-3 py-2 font-serif text-lg font-extrabold text-navy-900 bg-sky-400 border-2 border-sky-400 rounded-xl cursor-pointer hover:bg-sky-500 transition-colors"
+          type="submit"
+          value="Send"
+        />
+      </form>
+    </div>
+
+    <div class="w-full text-gray-100 h-fit pt-10 sm:pt-0 sm:pl-16 max-w-md mx-auto sm:mx-0">
+      <!-- Contact info -->
+      <label class="font-semibold block mb-2">Email: <span class="text-sky-400">{{mailId}}</span></label>
+      <!-- Add more contact details here if needed -->
+    </div>
+  </div>
+</div>

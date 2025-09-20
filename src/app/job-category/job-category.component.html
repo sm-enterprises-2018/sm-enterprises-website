@@ -1,0 +1,41 @@
+<div id="categories" class="h-fit bg-blue-400 px-6 py-16">
+  <h1 class="text-5xl font-semibold text-sky-100 underline text-center mb-12">
+    Job Categories
+  </h1>
+
+  <div class="w-full flex justify-center">
+    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-sky-100 text-xl font-medium max-w-5xl">
+
+      <li
+        *ngFor="let job of jobCategories"
+        class="relative bg-blue-600 rounded-md px-6 py-5 shadow-lg text-center transition-colors duration-300 cursor-pointer"
+      >
+        <!-- Job Title Trigger -->
+        <span
+          class="relative job-title-trigger group inline-block text-sky-100 hover:text-navy-900 transition-colors"
+          (click)="toggleDescription(job.title)"
+        >
+          {{ job.title }}
+
+          <!-- 💻 Desktop Hover Bubble -->
+          <div
+            class="absolute hidden sm:block top-full left-1/2 transform -translate-x-1/2 mt-3 w-64 p-4 bg-gray-500 text-navy-900 text-sm rounded-2xl shadow-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40 pointer-events-none"
+          >
+            {{ job.description }}
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1.5 w-4 h-4 bg-gray-500 rotate-45"></div>
+          </div>
+        </span>
+
+        <!-- 📱 Mobile Tap Bubble -->
+        <div
+          *ngIf="selectedJobTitle === job.title"
+          class="sm:hidden absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-64 p-4 bg-gray-500 text-navy-900 text-sm rounded-2xl shadow-xl z-50"
+        >
+          {{ job.description }}
+          <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1.5 w-4 h-4 bg-coolGray-50 rotate-45"></div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</div>
